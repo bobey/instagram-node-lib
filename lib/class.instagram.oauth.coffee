@@ -32,8 +32,6 @@ class InstagramOAuth
         return params['respond'](params['response'])
       else if params['redirect']?
         params['response'].redirect(params['redirect']);
-      else
-        params['response'].writeHead 200, { 'Content-Length': 0, 'Content-Type': 'text/plain' }
-      params['response'].end()
+        params['response'].end()
 
 module.exports = InstagramOAuth
